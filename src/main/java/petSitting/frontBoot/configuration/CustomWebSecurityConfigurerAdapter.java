@@ -23,12 +23,12 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
 	protected void configure(HttpSecurity http) throws Exception {
 		
 	//AUCUNE AUTHORISATION (POUR TESTER D'AUTRES TRUCS)
-//		http.csrf().disable();
-//		http.authorizeRequests().anyRequest().permitAll();
+		http.csrf().disable();
+		http.authorizeRequests().anyRequest().permitAll();
 		
 	//AUTHENTIFICATION PAR LOGIN/PWD	
-		http.csrf().disable();
-		http.authorizeRequests().anyRequest().authenticated().and().httpBasic();
+//		http.csrf().disable();
+//		http.authorizeRequests().anyRequest().authenticated().and().httpBasic();
 	
 	//FERMETURE DES AUTHORISATIONS
 		
